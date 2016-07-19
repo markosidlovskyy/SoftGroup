@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.marko.softgroup.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lianearLayout"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Первести з:"
+                android:id="@+id/textView"
+                android:textColor="@color/abc_search_url_text_pressed"
+                android:textSize="13dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_input"
+
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_toRightOf="@+id/textView" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="на:"
+                android:id="@+id/textView2"
+                android:textColor="@color/abc_search_url_text_pressed"
+                android:textSize="13dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_output"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_toRightOf="@+id/textView2" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/input_edit_txt"
+        android:minLines="4"
+        android:layout_below="@+id/lianearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/lianearLayout"
+        android:layout_alignEnd="@+id/lianearLayout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перекласти"
+        android:id="@+id/translateBtn"
+        android:layout_below="@+id/input_edit_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_backgroun"
+        android:textColor="@color/background_floating_material_light"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/output_txt"
+        android:layout_below="@+id/translateBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:textColor="@color/abc_search_url_text_pressed" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Визначити мову"
+        android:id="@+id/detectBtn"
+        android:layout_alignTop="@+id/translateBtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_backgroun"
+        android:textColor="@color/background_floating_material_light"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp" />
+</RelativeLayout>

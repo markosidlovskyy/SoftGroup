@@ -18,7 +18,7 @@ import javax.net.ssl.HttpsURLConnection;
 /**
  * Created by Marko on 7/18/2016.
  */
-public class Helper {
+public class TranslationService {
 
     public String getTranslate(String url) throws JSONException, IOException {
         JSONArray jsonArray = null;

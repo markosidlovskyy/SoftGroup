@@ -139,10 +139,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Map<String, String> doInBackground(String... urls) {
-            Helper helper = new Helper();
+            TranslationService translationService = new TranslationService();
 
             try {
-                languages = helper.getLanguagesArray(urls[0]);
+                languages = translationService.getLanguagesArray(urls[0]);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -168,10 +168,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... urls) {
-            Helper helper = new Helper();
+            TranslationService translationService = new TranslationService();
             String value = null;
             try {
-                value = helper.getTranslate(urls[0]);
+                value = translationService.getTranslate(urls[0]);
             } catch (JSONException e) {
                 publishProgress("Cannot get response");
             } catch (IOException e) {
@@ -192,10 +192,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... urls) {
-            Helper helper = new Helper();
+            TranslationService translationService = new TranslationService();
             String value = null;
             try {
-                value = helper.detectedLanguage(urls[0]);
+                value = translationService.detectedLanguage(urls[0]);
             } catch (JSONException e) {
                 publishProgress("Cannot get response");
             } catch (IOException e) {
